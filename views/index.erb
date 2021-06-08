@@ -1,0 +1,20 @@
+<h1>goodfoodhunting</h1>
+
+<a href="/dishes/new">share a dish</a>
+
+<% dishes.each do |dish| %>
+
+  <h2>
+    <a href="/dishes/<%= dish["id"] %>">
+      <%= dish["name"] %>
+    </a>
+  </h2>
+
+  <img src="<%= dish["image_url"] %>" alt="">
+
+<% end%>
+
+<%# 
+urls are user interface
+we want prettier urls
+http://localhost:4567/details/2 %>

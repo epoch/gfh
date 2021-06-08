@@ -1,0 +1,19 @@
+<h1>dish details</h1>
+
+
+<p><%= dish['name'] %></p>
+<p><%= dish['id'] %></p>
+<p><%= dish['image_url'] %></p>
+
+
+<!-- links makes get requests, so we're using a form -->
+
+  <form action="/dishes/<%= dish['id'] %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>delete</button>
+  </form>
+
+
+
+<a href="/dishes/<%= dish['id'] %>/edit">edit</a>
+
